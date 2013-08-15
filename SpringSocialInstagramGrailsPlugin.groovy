@@ -8,6 +8,7 @@ class SpringSocialInstagramGrailsPlugin {
         "grails-app/views/error.gsp"
     ]
 
+    Map dependsOn = ['springSocialCore': '0.1.31 > *']
     // TODO Fill in these fields
     def title = "Spring Social Instagram Plugin" // Headline display name of the plugin
     def author = "Michael Astreiko"
@@ -41,7 +42,8 @@ Brief summary/description of the plugin.
     }
 
     def doWithSpring = {
-        // TODO Implement runtime spring config (optional)
+        xmlns context: "http://www.springframework.org/schema/context"
+        context.'component-scan'('base-package': "net.realizeideas.springconfig.instagram")
     }
 
     def doWithDynamicMethods = { ctx ->
