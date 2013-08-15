@@ -1,48 +1,31 @@
-grails.work.dir = "target"
-grails.project.class.dir = "target/classes"
-grails.project.test.class.dir = "target/test-classes"
-grails.project.test.reports.dir = "target/test-reports"
+grails.project.work.dir = 'target'
 
 grails.project.dependency.resolution = {
-    // inherit Grails' default dependencies
-    inherits("global") {
-        // uncomment to disable ehcache
-        // excludes 'ehcache'
-    }
-    log "warn" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
-    legacyResolve false // whether to do a secondary resolve on plugin installation, not advised and here for backwards compatibility
+
+    inherits 'global'
+    log 'warn'
+
     repositories {
         grailsCentral()
+        mavenLocal()
         mavenCentral()
-        // uncomment the below to enable remote dependency resolution
-        // from public Maven repositories
-        //mavenLocal()
-        //mavenRepo "http://snapshots.repository.codehaus.org"
-        //mavenRepo "http://repository.codehaus.org"
-        //mavenRepo "http://download.java.net/maven/2/"
-        //mavenRepo "http://repository.jboss.com/maven2/"
     }
-    dependencies {
-        // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
 
-        // runtime 'mysql:mysql-connector-java:5.1.21'
+    dependencies {
         compile "javax.inject:javax.inject:1"
         compile "org.codehaus.jackson:jackson-mapper-asl:1.9.9"
-        compile("org.springframework.social:spring-social-core:1.1.0.local",
-                "org.springframework.social:spring-social-web:1.1.0.local",
-                "org.springframework.security:spring-security-crypto:3.1.0.RC3"
-        ) { transitive = false }
+		  compile("org.springframework.security:spring-security-crypto:3.1.0.RC3") { transitive = false }
     }
 
     plugins {
-        build(":tomcat:$grailsVersion",
-              ":release:2.2.1",
-              ":rest-client-builder:1.0.3") {
+        build ':release:2.2.1', ':rest-client-builder:1.0.3', {
             export = false
         }
-        compile(":spring-security-core:1.2.7.3"){
+
+        compile(":spring-security-core:1.2.7.3") {
             export = false
         }
+
         compile ":spring-social-core:0.1.31"
     }
 }

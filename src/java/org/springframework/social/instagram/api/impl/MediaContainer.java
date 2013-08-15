@@ -19,7 +19,6 @@ public class MediaContainer extends AbstractInstagramResponseContainer<Media> {
         @Override
         public MediaContainer deserialize(JsonParser jp, DeserializationContext ctxt)
                 throws IOException, JsonProcessingException {
-            // TODO Auto-generated method stub
             return deserializeResponseObject(jp, MediaContainer.class, Media.class);
         }
     }

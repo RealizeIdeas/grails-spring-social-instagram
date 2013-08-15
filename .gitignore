@@ -1,10 +1,12 @@
-
 target/
 logs/
 *.iml
 *.ipr
 *.iws
-/*.DS_Store
+*.DS_Store
 /classes/
 /.idea/
 CustomConfig.groovy
+grails-spring-social-instagram-*.zip
+plugin.xml
+web-app
