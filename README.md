@@ -15,7 +15,7 @@ After this properties are configured you can use 'instagram' providerId in your 
 ### Example of add Instagram account button:
 ```html
   <g:form method="POST" mapping="springSocialConnect" params="[providerId: 'instagram']">
-    <g:hiddenField name="scope" value="basic comments relationships likes""/>
+    <g:hiddenField name="scope" value="basic comments relationships likes"/>
     <g:submitButton name="connectInstagram" value="Connect Instagram"/>
   </g:form>
 ```
