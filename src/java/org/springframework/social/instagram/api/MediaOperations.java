@@ -2,7 +2,6 @@ package org.springframework.social.instagram.api;
 
 import java.util.List;
 
-
 public interface MediaOperations {
 	
 	/**
@@ -86,5 +85,5 @@ public interface MediaOperations {
 	 */
 	List<Media> search(double latitude, double longitude, long maxTimeStamp, long minTimeStamp, int distance);
 	
-	public static final String MEDIA_ENDPOINT = "media/";
+	String MEDIA_ENDPOINT = "media/";
 }

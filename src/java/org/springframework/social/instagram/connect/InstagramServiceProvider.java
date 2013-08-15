@@ -13,6 +13,7 @@ public class InstagramServiceProvider extends AbstractOAuth2ServiceProvider<Inst
 		this.clientId = clientId;
 	}
 	
+	@Override
 	public Instagram getApi(String accessToken) {
 		return new InstagramTemplate(clientId, accessToken);
 	}

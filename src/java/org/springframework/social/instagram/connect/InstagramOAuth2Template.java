@@ -16,19 +16,20 @@ import org.springframework.web.client.RestTemplate;
 
 public class InstagramOAuth2Template extends OAuth2Template {
 
-    private String clientId;
-    private String clientSecret;
+	private String clientId;
+	private String clientSecret;
 
 	public InstagramOAuth2Template(String clientId, String clientSecret) {
-        super(clientId, clientSecret, "https://api.instagram.com/oauth/authorize", "https://api.instagram.com/oauth/access_token");
-        this.clientId = clientId;
-        this.clientSecret = clientSecret;
+		super(clientId, clientSecret, "https://api.instagram.com/oauth/authorize", "https://api.instagram.com/oauth/access_token");
+		this.clientId = clientId;
+		this.clientSecret = clientSecret;
 	}
 	
 	@Override
 	protected RestTemplate createRestTemplate() {
 		RestTemplate restTemplate = new RestTemplate(ClientHttpRequestFactorySelector.getRequestFactory());
 		FormHttpMessageConverter messageConverter = new FormHttpMessageConverter() {
+			@Override
 			public boolean canRead(Class<?> clazz, MediaType mediaType) {
 				return true;
 			}
@@ -41,8 +42,8 @@ public class InstagramOAuth2Template extends OAuth2Template {
 	@SuppressWarnings("unchecked")	
 	protected AccessGrant postForAccessGrant(String accessTokenUrl, MultiValueMap<String, String> parameters) {
 		// TODO: Look into weird JSON response bug.
-        parameters.set("client_id", this.clientId);
-        parameters.set("client_secret", this.clientSecret);
+		parameters.set("client_id", this.clientId);
+		parameters.set("client_secret", this.clientSecret);
 		Map<String,Object> response = getRestTemplate().postForObject(accessTokenUrl, parameters, Map.class);
 		Entry<String,Object> entry = response.entrySet().iterator().next();
 		String jsonString = entry.getKey();
