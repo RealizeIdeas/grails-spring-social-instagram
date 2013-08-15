@@ -1,4 +1,4 @@
-package com.buddybounce.dashboard.springconfig.instagram;
+package net.realizeideas.springconfig.instagram;
 
 import org.codehaus.groovy.grails.commons.GrailsApplication;
 import org.springframework.beans.factory.annotation.Autowired;

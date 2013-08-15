@@ -25,6 +25,7 @@ grails.project.dependency.resolution = {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
 
         // runtime 'mysql:mysql-connector-java:5.1.21'
+        compile "org.codehaus.jackson:jackson-mapper-asl:1.9.9"
         compile("org.springframework.social:spring-social-core:1.1.0.local",
                 "org.springframework.social:spring-social-web:1.1.0.local"
         ) { transitive = false }
