@@ -108,7 +108,4 @@ public class UserTemplate extends AbstractInstagramOperations implements UserOpe
 		params.add("action", action);
 		post(buildUri(USERS_ENDPOINT + Long.toString(userId) + "/relationship/"), params, Map.class);
 	}
-	
-	
-	
 }

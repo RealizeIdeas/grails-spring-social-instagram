@@ -2,7 +2,6 @@ package org.springframework.social.instagram.api;
 
 import java.util.List;
 
-
 public interface TagOperations {
 
 	/**
@@ -35,6 +34,5 @@ public interface TagOperations {
 	 */
 	List<Tag> search(String query);
 	
-	
-	public static final String TAGS_ENDPOINT = "tags/";
+	String TAGS_ENDPOINT = "tags/";
 }

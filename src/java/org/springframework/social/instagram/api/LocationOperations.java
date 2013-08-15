@@ -2,7 +2,6 @@ package org.springframework.social.instagram.api;
 
 import java.util.List;
 
-
 public interface LocationOperations {
 	
 	/**
@@ -53,7 +52,6 @@ public interface LocationOperations {
 	 * @return	A list of locations
 	 */
 	List<Location> search(long foursquareId);
-	
-	public static final String LOCATIONS_ENDPOINT = "locations/";
-	
+
+	String LOCATIONS_ENDPOINT = "locations/";
 }

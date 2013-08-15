@@ -2,9 +2,8 @@ package org.springframework.social.instagram.api;
 
 import java.util.List;
 
-
 /**
- * Interface defining the operations for retrieving information about Instagram users and
+ * Defines the operations for retrieving information about Instagram users and
  * managing relationships amongst the authenticated user.
  */
 public interface UserOperations {
@@ -123,6 +122,6 @@ public interface UserOperations {
 	 * @param user
 	 */
 	void denyUser(long user);
-	
-	public static final String USERS_ENDPOINT = "users/";
+
+	String USERS_ENDPOINT = "users/";
 }
