@@ -14,7 +14,7 @@ class SpringSocialInstagramGrailsPlugin {
     def author = "Michael Astreiko"
     def authorEmail = "michael.astreiko@realizeideas.net"
     def description = '''\
-Brief summary/description of the plugin.
+Grails plugin to use Instagram via Spring Social API.
 '''
 
     // URL to the plugin's documentation
