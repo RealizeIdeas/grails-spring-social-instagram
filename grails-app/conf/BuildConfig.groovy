@@ -1,3 +1,4 @@
+grails.work.dir = "target"
 grails.project.class.dir = "target/classes"
 grails.project.test.class.dir = "target/test-classes"
 grails.project.test.reports.dir = "target/test-reports"
@@ -25,9 +26,11 @@ grails.project.dependency.resolution = {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
 
         // runtime 'mysql:mysql-connector-java:5.1.21'
+        compile "javax.inject:javax.inject:1"
         compile "org.codehaus.jackson:jackson-mapper-asl:1.9.9"
         compile("org.springframework.social:spring-social-core:1.1.0.local",
-                "org.springframework.social:spring-social-web:1.1.0.local"
+                "org.springframework.social:spring-social-web:1.1.0.local",
+                "org.springframework.security:spring-security-crypto:3.1.0.RC3"
         ) { transitive = false }
     }
 
