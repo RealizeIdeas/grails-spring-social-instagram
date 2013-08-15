@@ -40,9 +40,9 @@ grails.project.dependency.resolution = {
               ":rest-client-builder:1.0.3") {
             export = false
         }
-        compile(":spring-security-core:1.2.7.3",
-                ":spring-social-core:0.1.31"){
+        compile(":spring-security-core:1.2.7.3"){
             export = false
         }
+        compile ":spring-social-core:0.1.31"
     }
 }

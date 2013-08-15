@@ -8,7 +8,6 @@ class SpringSocialInstagramGrailsPlugin {
         "grails-app/views/error.gsp"
     ]
 
-    Map dependsOn = ['springSocialCore': '0.1.31 > *']
     def title = "Spring Social Instagram Plugin" // Headline display name of the plugin
     def author = "Michael Astreiko"
     def authorEmail = "michael.astreiko@realizeideas.net"
