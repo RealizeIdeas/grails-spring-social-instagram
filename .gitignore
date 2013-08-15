@@ -1,0 +1,10 @@
+
+target/
+logs/
+*.iml
+*.ipr
+*.iws
+/*.DS_Store
+/classes/
+/.idea/
+CustomConfig.groovy
