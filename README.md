@@ -5,6 +5,7 @@ Grails plugin to use Instagram via Spring Social API
 
 ### Required properties in Config.groovy:
 instagram.clientId = "client_id"
+
 instagram.clientSecret = "client_secret"
 
 After this properties are configured you can use 'instagram' providerId in your app with spring social core to connect user Instagram account. After this all operations you got permissions for are available through InstagramTemplate.
