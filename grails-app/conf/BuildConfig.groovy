@@ -9,7 +9,7 @@ grails.project.dependency.resolution = {
         grailsCentral()
         mavenLocal()
         mavenCentral()
-        mavenRepo 'http://maven.springframework.org/milestone/org/springframework/social/spring-social-core/1.1.0.M3/'
+        mavenRepo 'http://maven.springframework.org/milestone/'
     }
 
     dependencies {
