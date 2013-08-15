@@ -4,7 +4,9 @@ grails-spring-social-instagram
 Grails plugin to use Instagram via Spring Social API
 
 ### Required properties in Config.groovy:
+
 instagram.clientId = "client_id"
+
 
 instagram.clientSecret = "client_secret"
 
