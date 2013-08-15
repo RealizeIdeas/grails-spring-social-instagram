@@ -16,7 +16,9 @@ class SpringSocialInstagramGrailsPlugin {
     def description = '''\
 Grails plugin to use Instagram via Spring Social API.
 '''
-
+    def scm = [ url: "https://github.com/RealizeIdeas/grails-spring-social-instagram" ]
+    def license = "APACHE"
+    def issueManagement = [ system: "GitHub", url: "https://github.com/RealizeIdeas/grails-spring-social-instagram/issues" ]
     // URL to the plugin's documentation
     def documentation = "http://grails.org/plugin/spring-social-instagram"
 
