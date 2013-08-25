@@ -12,11 +12,11 @@ instagram.clientSecret = "client_secret"
 After this properties are configured you can use 'instagram' providerId in your app with spring social core to connect user Instagram account. After this all operations you got permissions for are available through InstagramTemplate.
 
 ## Examples
-### Add Instagram account button:
+### Signin through Instagram button:
 ```html
-  <g:form method="POST" mapping="springSocialConnect" params="[providerId: 'instagram']">
+  <g:form method="POST" mapping="springSocialSignIn" params="[providerId: 'instagram']">
     <g:hiddenField name="scope" value="basic comments relationships likes"/>
-    <g:submitButton name="connectInstagram" value="Connect Instagram"/>
+    <g:submitButton name="connectInstagram" value="Sign in with Instagram"/>
   </g:form>
 ```
 
